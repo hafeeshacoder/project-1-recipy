@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipy result </title>
+	<link rel="icon" type="image/x-icon" href="C:\Users\HP250\OneDrive\Documents\HTML\icons8-hotel-check-out-50.png">
+</head>
+<body style="background-color:beige;"> <h1 style="text-align: center;background-color: beige;color:purple; border: 2px dotted black";> Your Search Results👩‍🍳</h1>
+	<h1>{{ recipe_data.name }}</h1>
+	<h2>Ingredients:</h2>
+	<ul>
+		{% for ingredient in recipe_data.ingredients %}
+			<li>{{ ingredient }}</li>
+		{% endfor %}
+	</ul>
+	<h2>Steps:</h2>
+	<ol>
+		{% for step in recipe_data.steps %}
+			<li>{{ step }}</li>
+		{% endfor %}
+	</ol>
+	<marquee behavior="scroll" direction="left" scrollamount="10">
+        <h1><i>🔥Your Next Meal Awaits!!!🔥</h1>
+</marquee>
+	
+<a href="/">Back</a>	
+</body>
+</html>
